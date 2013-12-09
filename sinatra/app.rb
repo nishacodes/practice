@@ -3,6 +3,7 @@ Bundler.require # requires everything in gem file
 
 class TestApp < Sinatra::Application
   get '/hi' do 
+    @breaker = ["Ashley", "Blake"].sample
     erb :index # name of view
   end
 
