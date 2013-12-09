@@ -1,0 +1,8 @@
+source 'https://rubygems.org' # you can also write :rubygems instead of the URL but when you run bundle install it gives a warning
+
+gem 'sinatra'
+
+group :development do # these are for things to be done on local server
+  gem 'shotgun' # doesn't require you to keep restarting server
+  gem 'tux' # is like debugger console
+end
