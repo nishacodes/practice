@@ -1,9 +1,12 @@
-require 'sinatra'
+require 'bundler' # runs gem install bundler
+Bundler.require # requires everything in gem file
 
-get '/hi' do 
-  "Hello World"
-end
+class TestApp < Sinatra::Application
+  get '/hi' do 
+    erb :index # name of view
+  end
 
-get '/nisha' do 
-  "Hey I'm Nisha."
+  get '/nisha' do 
+    "Hey I'm Nisha."
+  end
 end
